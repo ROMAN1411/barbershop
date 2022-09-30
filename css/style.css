@@ -1,0 +1,288 @@
+:root {
+    --primary-title-color: #ffffff;
+    --secondary-title-color: #303030;
+    --primary-text-color: #555555;
+    --secondary-text-color: #303030;
+    --third-text-color: #9DA4BD;
+    --accent-color: #FF6C00;
+    --header-text-color: #ffffff;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.02em;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.list {
+    list-style: none;
+}
+
+.btn {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.pre-title {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.after-title {
+    font-size: 18px;
+    line-height: 1.67;
+}
+
+.section-title {
+    font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 1.17;
+        letter-spacing: 0.05em;
+}
+
+.social-link {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    color: var(--secondary-text-color);
+}
+
+.social-link:hover,
+.social-link:focus {
+    color: var(--accent-color);
+}
+
+/* --- HEADER ---*/
+
+.header {
+    background-color: yellowgreen;
+}
+.header-link {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    color: var(--header-text-color);
+}
+.header-link:hover,
+.header-link:focus {
+    color: var(--accent-color);
+}
+
+.header-tel-link { 
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    color: var(--header-text-color);
+}
+
+.header-btn {
+    color: #FFFFFF;
+}
+
+/* --- Hero --- */
+
+.hero {
+    background-color: tomato;
+}
+
+.hero-pre-title {
+    color: rgba(157, 164, 189, 0.6);
+}
+
+.hero-title {
+    font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 72px;
+        line-height: 1.18;
+        letter-spacing: 0.05em;
+        color: var(--header-text-color);
+}
+
+.hero-after-title {
+    color: var(--third-text-color);
+}
+
+/* --- ABOUT ---*/
+
+.about-pre-title {
+    color: var(--secondary-title-color);
+}
+
+.about-title {
+    color: var(--secondary-title-color);
+}
+
+.about-after-title {
+    color: var(--primary-text-color);
+}
+
+.about-btn {
+    color: #303030;
+}
+
+/* --- PRICES ---*/
+
+.prices {
+    background-color: brown;
+}
+
+.prices-pre-title {
+    color: rgba(157, 164, 189, 0.6);
+}
+
+.prices-title {
+    color: var(--primary-title-color);
+}
+
+.prices-type,
+.prices-count {
+    font-size: 18px;
+    line-height: 1.67;
+    color: var(--primary-text-color);
+}
+
+.prices-btn {
+    color: #ffffff;
+}
+
+/* --- REASONS --- */
+
+.reasons {
+    background-color: burlywood ;
+}
+
+.reasons-count {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    color: var(--secondary-text-color);
+}
+
+.reasons-item-text {
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 1.36;
+        text-align: center;
+    
+        color: var(--secondary-text-color);
+}
+
+.reasons-pre-title {
+    color: var(--secondary-text-color);
+}
+
+.reasons-title {
+    color: var(--secondary-title-color);
+}
+
+.reasons-after-title {
+    color: var(--primary-text-color);
+}
+
+/* --- MASTERS --- */
+
+.masters-pre-title {
+    color: var(--secondary-title-color);
+}
+
+.masters-title {
+    color: var(--secondary-title-color);
+}
+
+.masters-item-title {
+    font-size: 18px;
+    line-height: 1.39;
+    text-align: center;
+
+    color: var(--secondary-text-color);
+}
+
+.masters-item-text {
+    font-size: 14px;
+    line-height: 1.36;
+    text-align: center;
+
+    color: var(--accent-color);
+}
+
+/* --- GALLERY --- */
+
+.gallery-pre-title {
+    color: var(--secondary-text-color);
+}
+
+/* --- ONLINE --- */
+
+.online {
+    background-color:blueviolet;
+}
+
+.online-title {
+    color: var(--primary-title-color);
+}
+
+/* --- CONTACTS --- */
+
+.contacts {
+    background-color: blueviolet;
+}
+
+.contacts-title {
+    color: var(--primary-title-color);
+}
+
+.contacts-address {
+    font-style: inherit;
+}
+
+.contacts-link {
+    font-size: 18px;
+    line-height: 1.67;
+
+    color: var(--third-text-color);
+}
+
+.contacts-time-title {
+    font-weight: 600;
+        font-size: 11px;
+        line-height: 1.36;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+}
+
+.contacts-time-text {
+    font-size: 18px;
+    line-height: 1.67;
+    
+    color: var(--third-text-color);
+}
+
+/* --- FOOTER --- */
+
+.footer {
+    background-color:aqua;
+}
+.footer-copy{
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    color: var(--third-text-color);
+}
+
