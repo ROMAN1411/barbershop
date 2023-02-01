@@ -9,21 +9,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
         rel="stylesheet">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header class="header container">
-        <div class="header-container ">
+    <header class="header">
+        <div class="container header-container">
             <nav class="header-navigation">
-                <a href="" class="header-logo link">
+                <a href="" class="header-logo link animate__animated animate__heartBeat">
                     <svg class="logo-icon" width="66" height="55">
                         <use href="./images/sprite.svg#icon-logo"></use>
                     </svg>
                 </a>
                 <ul class="header-list list">
                     <li class="header-item">
-                        <a class="header-link link" href="">О нас</a>
+                        <a class="header-link link current" href="">О нас</a>
                     </li>
                     <li class="header-item">
                         <a class="header-link link" href="">Услуги и цены</a>
@@ -38,7 +39,7 @@
             </nav>
             <div class="header-contacts">
                 <a class="header-tel-link link" href="tel:+380441111111">+38 044 111 11 11</a>
-                <button class="header-btn btn" type="button">онлайн-запись</button>
+                <button class="header-btn btn" type="button" data-modal-open>онлайн-запись</button>
             </div>
 
         </div>
@@ -179,8 +180,14 @@
                 <h2 class="section-title masters-title">Наши мастера</h2>
                 <ul class="masters-list list">
                     <li class="masters-item">
-                        <img src="./images/master_img-1.jpg" alt="Барбер стрижет клиента" width="370" height="346">
-                            <div class="masters-item-bottom">
+                        <div class="masters-top-wrapper">
+                            <img src="./images/master_img-1.jpg" alt="Барбер стрижет клиента" width="370" height="346">
+                            <p class="masters-top-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis cumque esse dolore, fugit eaque dicta nam
+                                sed. Atque, repellendus.
+                            </p>
+                        </div>
+                        <div class="masters-item-bottom">
                                 <h3 lang="en" class="masters-item-title">John Smith</h3>
                                 <p lang="en" class="masters-item-text">Extreme Barber</p>
                                 <ul class="masters-item-list social-list list">
@@ -216,7 +223,13 @@
                             </div>
                     </li>
                     <li class="masters-item">
-                        <img src="./images/master_img-2.jpg" alt="Барбер стрижет клиента" width="370" height="346">
+                        <div class="masters-top-wrapper">
+                            <img src="./images/master_img-2.jpg" alt="Барбер стрижет клиента" width="370" height="346">
+                            <p class="masters-top-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis cumque esse dolore, fugit eaque dicta nam
+                                sed. Atque, repellendus.
+                            </p>
+                        </div>
                             <div class="masters-item-bottom">
                                 <h3 lang="en" class="masters-item-title">Michele Doe</h3>
                                 <p lang="en" class="masters-item-text">Extreme Barber</p>
@@ -253,7 +266,13 @@
                             </div>
                     </li>
                     <li class="masters-item">
-                        <img src="./images/master_img-3.jpg" alt="Барбер стрижет клиента" width="370" height="346">
+                        <div class="masters-top-wrapper">
+                            <img src="./images/master_img-3.jpg" alt="Барбер стрижет клиента" width="370" height="346">
+                            <p class="masters-top-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis cumque esse dolore, fugit eaque dicta nam
+                                sed. Atque, repellendus.
+                            </p>
+                        </div>
                             <div class="masters-item-bottom">
                                 <h3 lang="en" class="masters-item-title">Alan Black</h3>
                                 <p lang="en" class="masters-item-text">Extreme Barber</p>
@@ -358,5 +377,13 @@
         </div>
 
     </footer>    
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="close-btn" data-modal-close>X</button>
+        </div>
+    </div>
+    
+    <script src="./js/modal.js"></script>
 </body>
 </html>
