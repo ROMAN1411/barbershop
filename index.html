@@ -44,6 +44,7 @@
 
         </div>
     </header>
+    
     <main>
         <section class="hero">
             <div class="container hero-container">  
@@ -333,36 +334,58 @@
             </div>
         </section>
         
-        <section class="online">
-            <div class="container online-container">
-                <div class="online-left">
+        <section class="contact-wrap">
+            <div class="container contact-wrap-container">
+                <section class="online">
                     <h2 class="online-title section-title">Онлайн-запись</h2>
-                </div>                
-                <div class="contacts">
+                    <form action="#" class="online-form">
+                        <div class="inputs">
+                            <input type="text" name="name" placeholder="Имя*" class="online-input">
+                            <input type="tel" name="tel" placeholder="Телефон*" class="online-input online-input-short">
+                        </div>
+                        
+                        <textarea name="message" placeholder="сообщение" class="online-text"></textarea>
+                        <button type="submit" class="btn online-btn">отправить</button>
+                    </form>
+                </section>  
+
+                <section class="contacts">
                     <h2 class="contacts-title section-title">Контакты</h2>
                     <address class="contacts-address">
                         <ul class="contacts-list list">
                             <li class="contacts-item">
+                                <svg class="contacts-icon">
+                                    <use href="./images/sprite.svg#icon-map-pin"></use>
+                                </svg>
                                 <a class="contacts-link link"
                                     href="https://www.google.com.ua/maps/place/%D1%83%D0%BB.+%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F,+7,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.3958107,30.501413,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4c8c951889799:0x58e0259a6e5b738d!8m2!3d50.3958107!4d30.5036017?hl=ru"
                                     target="_blank">ул. Васильковая, 7А Киев, 08132</a>
                             </li>
+
                             <li class="contacts-item">
+                                <svg class="contacts-icon">
+                                    <use href="./images/sprite.svg#icon-tel"></use>
+                                </svg>
                                 <a class="contacts-link link" href="tel:+380441111111">+38 044 111 11 11</a>
                             </li>
+                            
                             <li class="contacts-item">
+                                <svg class="contacts-icon">
+                                    <use href="./images/sprite.svg#icon-mail"></use>
+                                </svg>
                                 <a class="contacts-link" href="mailto:barbershop@email.com">barbershop@email.com</a>
                             </li>
                         </ul>
                     </address>
                     <b class="contacts-time-title pre-title pre-title-light">время работы</b>
                     <p class="contacts-time-text">Ежедневно с 9:00 до 22:00</p>
-                </div>
+                </section>
             </div>
 
         </section>
 
     </main>
+
     <footer class="footer">
         <div class="container footer-container">
             <p class="footer-copy">&copy; Copyright 2020</p>
@@ -381,6 +404,57 @@
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="close-btn" data-modal-close>X</button>
+            <p class="modal-title">Загогловок модального окна</p>
+            <form action="#" class="modal-form">
+                <div class="modal-field">
+                    <label for="user-name" class="input-label">Ваше имя</label>
+                    <span class="input-wrapper">    
+                        <input type="text" name="user-name" id="user-name" class="modal-input" placeholder="John Doe">
+                        <svg class="input-icon">
+                            <use href="./images/sprite.svg#icon-user"></use>
+                        </svg>
+                    </span>
+                </div>
+
+                <div class="modal-field">
+                    <label for="user-email" class="input-label">Ваша почта</label>
+                    <span class="input-wrapper">
+                    <input type="email" name="user-email" id="user-email" class="modal-input" placeholder="mail@mail">
+                        <svg class="input-icon">
+                            <use href="./images/sprite.svg#icon-envelope"></use>
+                        </svg>
+                    </span>
+                </div>
+
+                <div class="modal-field">
+                    <label for="user-tel" class="input-label">Ваш телефон</label>
+                    <span class="input-wrapper">
+                    <input type="tel" name="user-tel" id="user-tel" class="modal-input" placeholder="0961111111">
+                        <svg class="input-icon">
+                            <use href="./images/sprite.svg#icon-phone"></use>
+                        </svg>
+                    </span>
+                </div>
+
+                <div class="modal-field">
+                    <label for="user-text" class="input-label">Ваш текст</label>
+                    <textarea name="user-text" id="user-text" class="modal-text-input" placeholder="Коммент"></textarea>
+                </div>
+
+                <input type="checkbox" id="modal-checkbox" class="modal-checkbox visually-hidden">
+                <label for="modal-checkbox" class="check-text">
+                    <span>
+                        <svg class="check-icon">
+                            <use href="./images/sprite.svg#icon-check"></use>
+                        </svg>
+                    </span>Соглашаюсь с &#160<a href="#">политикой пользования</a></label>
+                
+                
+                
+                
+                <button type="submit" class="btn modal-btn">Отправить</button>
+            </form>
+
         </div>
     </div>
     
