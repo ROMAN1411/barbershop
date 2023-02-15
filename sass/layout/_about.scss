@@ -1,0 +1,50 @@
+.about-container {
+    padding-top: 130px;
+    padding-bottom: 130px;
+    display: flex;
+}
+
+.about-list {
+    display: flex;
+}
+
+.about-item+.about-item {
+    margin-left: 30px;
+}
+
+.about-right {
+    margin-left: 64px;
+}
+
+.about-pre-title {
+    color: var(--secondary-title-color);
+    margin-bottom: 20px;
+}
+
+.about-title {
+    color: var(--secondary-title-color);
+    margin-bottom: 20px;
+}
+
+.about-after-title {
+    color: var(--primary-text-color);
+    margin-bottom: 20px;
+}
+
+.about-text {
+    width: 480px;
+    margin-bottom: 40px;
+    text-align: justify;
+
+    font-family: 'Open Sans';
+    font-size: 14px;
+    line-height: 1.86;
+
+    letter-spacing: 0.02em;
+
+    color: var(--primary-text-color);
+}
+
+.about-btn {
+    color: #303030;
+}
