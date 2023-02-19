@@ -1,66 +1,48 @@
-.hero-container {
-    display: flex;
-}
+.hero {
+    outline: 1px solid green;
 
-.hero-left {
-    width: 98px;
-    display: flex;
-    align-items: flex-end;
-    padding-left: 28px;
-    padding-bottom: 25px;
-}
-
-.hero-list {
-    display: flex;
-    align-items: center;
-    transform: rotate(-90deg);
-    transform-origin: top left;
-}
-
-.hero-list::before {
-    content: "";
-    width: 60px;
-    height: 1px;
-    background-color: var(--secondary-text-color);
-    margin-right: 40px;
-}
-
-.hero-item+.hero-item {
-    margin-left: 40px;
-}
-
-.hero-right {
-    /* flex-grow: 1; */
-    background-color: var(--primary-text-color);
+    max-width: 1280px;
     background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
         url(../images/main-bg.jpg);
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-position: 155px 0;
+    margin: 0 auto;
 
-    flex-grow: 1;
-    padding-top: 272px;
-    padding-left: 90px;
-    padding-bottom: 206px;
-}
+    &__container {
+        display: flex;
+    }
 
-.hero-pre-title {
-    color: rgba(157, 164, 189, 0.6);
-    margin-bottom: 20px;
-}
+    &__left {
+        width: 100px;
+        display: flex;
+        align-items: flex-end;
+        padding-left: 28px;
+        padding-bottom: 25px;
 
-.hero-title {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 72px;
-    line-height: 1.18;
-    letter-spacing: 0.05em;
-    color: var(--header-text-color);
-    margin-bottom: 20px;
-}
+        .hero__social {
+                transform: rotate(-90deg);
+                transform-origin: top left;
+            }
+    }
 
-.hero-after-title {
-    color: var(--third-text-color);
-    max-width: 370px;
+    &__right {
+        padding-top: 272px;
+        padding-left: 90px;
+        padding-bottom: 206px;
+    }
 
+    &__pre-title {
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        font-family: 'Raleway', sans-serif;
+        @include font (700, 72px, 85px, 0.05em);
+        color: getColor('primary-title');
+        margin-bottom: 20px;
+    }
+
+    &__after-title {
+        max-width: 370px;
+    }
 }

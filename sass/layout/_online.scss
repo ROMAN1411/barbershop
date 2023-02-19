@@ -1,65 +1,58 @@
 .online {
     width: 50%;
     padding-right: 40px;
+
+    &__section-title {
+        margin-bottom: 44px;
+    }
+    
+    &__inputs {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 44px;
+    }
+    
+    &__input {
+        width: 270px;
+        height: 24px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+        color: getColor('primary-title');
+        outline: none;
+
+        &--short {
+            width: 260px;
+        }
+    }
+
+    &__text {
+        width: 100%;
+        height: 76px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+        resize: none;
+        margin-bottom: 44px;
+        color: getColor('primary-title');
+        outline: none;
+    }
 }
 
-.online-title {
-    color: var(--primary-title-color);
-    margin-bottom: 44px;
-}
+.online__input::placeholder,
+.online__text::placeholder {
+    @include font (600, 11px, 15px, 0.1em);
 
-.inputs {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 44px;
-}
-
-.online-input {
-    width: 270px;
-    height: 24px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid rgba(157, 164, 189, 0.4);
-    color: #fff;
-    outline: none;
-}
-
-.online-input-short {
-    width: 260px;
-}
-
-.online-text {
-    width: 100%;
-    height: 76px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid rgba(157, 164, 189, 0.4);
-    resize: none;
-    margin-bottom: 44px;
-    color: #fff;
-    outline: none;
-}
-
-.online-input::placeholder,
-.online-text::placeholder {
-    font-weight: 600;
-    font-size: 11px;
-    line-height: calc(15 / 11);
-    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: rgba(157, 164, 189, 0.4);
 }
 
-.online-input:focus,
-.online-text:focus {
-    border-color: #fff;
+.online__input:focus,
+.online__text:focus {
+    border-color: getColor('primary-title');
 }
 
-.online-input:focus::placeholder,
-.online-text:focus::placeholder {
-    color: #fff;
-}
-
-.online-btn {
-    color: #FFFFFF;
+.online__input:focus::placeholder,
+.online__text:focus::placeholder {
+    color: getColor('primary-title');
 }

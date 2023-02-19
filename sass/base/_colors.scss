@@ -1,9 +1,27 @@
-:root {
-    --primary-title-color: #ffffff;
-    --secondary-title-color: #303030;
-    --primary-text-color: #555555;
-    --secondary-text-color: #303030;
-    --third-text-color: #9DA4BD;
-    --accent-color: #FF6C00;
-    --header-text-color: #ffffff;
-}
+$colors: (
+    'primary-title': #ffffff,
+    'secondary-title': #303030,
+
+    'primary-text': #555555,
+    'secondary-text': #303030,
+    'third-text': #9DA4BD,
+    
+    'accent': #FF6C00,
+);
+
+@function getColor($key) {
+    @return map-get($colors, $key);
+};
+
+// :root {
+//     --primary-title-color: #ffffff;
+//     --secondary-title-color: #303030;
+
+//     --primary-text-color: #555555;
+//     --secondary-text-color: #303030;
+//     --third-text-color: #9DA4BD;
+
+//     --accent-color: #FF6C00;
+//     --header-text-color: #ffffff;
+// }
+

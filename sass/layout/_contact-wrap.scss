@@ -5,13 +5,13 @@
     background-size: 50% 100%;
     background-repeat: no-repeat;
     background-position: right;
-    max-width: 1280px;
     margin: 0 auto;
+
+    &__container {
+        padding-top: 130px;
+        padding-bottom: 130px;
+
+        display: flex;
+    }
 }
 
-.contact-wrap-container {
-    padding-top: 130px;
-    padding-bottom: 130px;
-
-    display: flex;
-}

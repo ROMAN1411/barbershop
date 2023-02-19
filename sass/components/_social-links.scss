@@ -1,12 +1,34 @@
-.social-link {
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    color: var(--secondary-text-color);
-    transition: color 300ms ease;
+.social__links {
+    @extend %align-items;
+
+
+    .social__item+.social__item {
+        margin-left: 40px;
+    }
+
+    &::before {
+        content: "";
+        width: 60px;
+        height: 1px;
+        background-color: getColor('secondary-text');
+        margin-right: 40px;
+    }
+
+    .social__link {
+        @include font (600, 11px, 15px, 0.2em);
+        color: getColor('secondary-text');
+        transition: color $transition-duration $transition-timing-function;
+
+        &:hover,
+        &:focus {
+            color: getColor('accent');
+        }
+    }
 }
 
-.social-link:hover,
-.social-link:focus {
-    color: var(--accent-color);
-}
+
+
+
+
+
+

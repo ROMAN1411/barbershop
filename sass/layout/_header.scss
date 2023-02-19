@@ -1,83 +1,68 @@
 .header {
     position: absolute;
     width: 100%;
-
+    
+    &__container {
+        @extend %align-items;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
 }
 
-.header-container {
-    display: flex;
-    align-items: center;
-
-    padding-top: 32px;
-    padding-bottom: 32px;
-}
-
-.header-navigation {
-    display: flex;
-    align-items: center;
-}
-
-.header-logo {
+.logo {
     margin-right: 70px;
+
+    &__icon {
+        width: 69px;
+        height: 55px;
+        fill: getColor('secondary-title');
+    }
 }
 
-.logo-icon {
-    fill: #303030;
+.navigation {
+    @extend %align-items;
+
+    &__list {
+        display: flex;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 40px;
+    }
+
+    &__link {
+        @include font (600, 12px, 16px, 0.1em);
+
+        color: getColor('primary-title');
+        position: relative;
+
+        transition: color $transition-duration $transition-timing-function;
+
+        &:hover,
+        &:focus {
+            color: getColor('accent');
+        }
+
+        &--current::after {
+            content: '';
+            position: absolute;
+            display: block;
+            background-color: getColor('accent');
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            bottom: -52px;
+        }
+    }
 }
 
-.header-list {
-    display: flex;
-}
-
-.header-item:not(:last-child) {
-    margin-right: 40px;
-}
-
-.header-contacts {
-    padding-right: 10px;
+.header__contacts {
+    @extend %align-items;
     margin-left: auto;
-    display: flex;
-    align-items: center;
 }
 
-.header-link {
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.1em;
-    color: var(--header-text-color);
-
-    position: relative;
-
-    transition: color 300ms ease;
-}
-
-.header-link:hover,
-.header-link:focus {
-    color: var(--accent-color);
-}
-
-.header-tel-link {
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.1em;
-    color: var(--header-text-color);
+.header__phone {
+    @include font (600, 12px, 16px, 0.1em);
+    color: getColor('primary-title');
     margin-right: 40px;
-}
-
-.header-btn {
-    color: #FFFFFF;
-}
-
-.current::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--accent-color);
-    display: block;
-    bottom: -52px;
-
 }

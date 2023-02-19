@@ -1,26 +1,30 @@
 .btn {
-    /* width: 160px; */
-    /* height: 40px; */
+    display: block;
+    @include font (600, 12px, 16px, 0.09em);
     padding: 12px 20px;
-
-
     font-family: inherit;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.09em;
     text-transform: uppercase;
 
-    border: 1px solid var(--accent-color);
+    border: 1px solid getColor('accent');
     border-radius: 25px;
     background-color: transparent;
     cursor: pointer;
 
-    transition: color 300ms linear, background-color 300ms linear;
-}
+    transition: 
+        color $transition-duration $transition-timing-function, 
+        background-color $transition-duration $transition-timing-function;
 
-.btn:hover,
-.btn:focus {
-    color: #ffffff;
-    background-color: var(--accent-color);
+    &:hover,
+    &:focus {
+        color: getColor('primary-title');
+        background-color: getColor('accent');
+    }
+
+    &--light {
+        color: getColor('primary-title');
+    }
+
+    &--dark {
+        color: getColor('secondary-title');
+    }
 }
