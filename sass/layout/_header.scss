@@ -36,7 +36,8 @@
         color: getColor('primary-title');
         position: relative;
 
-        transition: color $transition-duration $transition-timing-function;
+        transition: 
+            color $transition-duration $transition-timing-function;
 
         &:hover,
         &:focus {

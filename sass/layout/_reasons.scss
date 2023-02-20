@@ -27,12 +27,19 @@
         flex-basis: calc(100% / 2 - 30px);
         margin-left: 30px;
         margin-top: 30px;
-    }
 
+        &--top-offset {
+            margin-top: 60px;
+        }
+        
+        &--bottom-offset {
+            margin-top: 0;
+        }
+    }
+    
     &__count {
         @include font (700, 42px, 57px, 0.05em);
         color: getColor('secondary-title');
-        // margin-bottom: 6px;
         text-align: center;
         display: flex;
         justify-content: center;

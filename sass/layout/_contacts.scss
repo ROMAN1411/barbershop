@@ -34,18 +34,18 @@
         color: getColor('third-text');
         margin-left: 18px;
     }
-}
 
-.contacts__pre-title {
-    margin-bottom: 20px;
-    color: #fff;
-    &::before {
-        color: rgba(157, 164, 189, 0.6);
+    &__pre-title {
+        margin-bottom: 20px;
+        color: #fff;
+
+        &::before {
+            color: rgba(157, 164, 189, 0.6);
+        }
+    }
+
+    &__time-text {
+        @include font (400, 18px, 30px, 0.02em);
+        color: getColor('third-text');
     }
 }
-
-.contacts__time-text {
-    @include font (400, 18px, 30px, 0.02em);
-    color: getColor('third-text');
-}
-

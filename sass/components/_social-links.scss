@@ -1,7 +1,6 @@
 .social__links {
     @extend %align-items;
 
-
     .social__item+.social__item {
         margin-left: 40px;
     }
@@ -17,7 +16,8 @@
     .social__link {
         @include font (600, 11px, 15px, 0.2em);
         color: getColor('secondary-text');
-        transition: color $transition-duration $transition-timing-function;
+        transition: 
+            color $transition-duration $transition-timing-function;
 
         &:hover,
         &:focus {
@@ -25,10 +25,3 @@
         }
     }
 }
-
-
-
-
-
-
-

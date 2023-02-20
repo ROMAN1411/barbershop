@@ -36,7 +36,8 @@
         border: 1px solid #999;
         @extend %align-items;
         justify-content: center;
-        transition: color $transition-duration $transition-timing-function;
+        transition: 
+            color $transition-duration $transition-timing-function;
 
         &:hover,
         &:focus {
@@ -75,13 +76,13 @@
         padding-left: 40px;
         padding-right: 20px;
         outline: none;
-        transition: border-color $transition-duration $transition-timing-function;
+        transition: 
+            border-color $transition-duration $transition-timing-function;
 
         &:focus {
             border-color: getColor('accent');
         }
     }
-
 
     &__icon {
         width: 18px;
@@ -90,7 +91,8 @@
         left: 10px;
         top: 50%;
         transform: translateY(-50%);
-        transition: fill $transition-duration $transition-timing-function;
+        transition: 
+            fill $transition-duration $transition-timing-function;
 
         .modal__input:focus+& {
             fill: getColor('accent');
@@ -106,57 +108,45 @@
         background: transparent;
         padding: 10px;
         outline: none;
-        transition: border-color $transition-duration $transition-timing-function;
+        transition: 
+            border-color $transition-duration $transition-timing-function;
 
         &:focus {
             border-color: getColor('accent');
         }
     }
 
+    &__check-label {
+        font-size: 14px;
+        line-height: 1.2;
+        color: getColor('primary-text');
+        display: flex;
+        margin-left: 15px;
+        margin-bottom: 15px;
+    }
 
+    &__check-icon {
+        width: 15px;
+        height: 15px;
+        border: 2px solid #303030;
+        border-radius: 3px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
+    .modal__btn {
+        margin: 0 auto;
+    }
 }
 
-
-
-
-
-
-.modal-btn {
-    margin: 0 auto;
-}
-
-
-
-
-.modal__check-label {
-    font-size: 14px;
-    line-height: 1.2;
-    color: getColor('primary-text');
-    display: flex;
-    margin-left: 15px;
-    margin-bottom: 15px;
-}
-
-.modal__check-icon {
-    width: 11px;
-    height: 8px;
-}
-
-.modal__check-text {
-    width: 15px;
-    height: 15px;
-    border: 2px solid #303030;
-    border-radius: 3px;
-    margin-right: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
-.modal__checkbox:checked + .modal__check-label span {
+.modal__checkbox:checked + .modal__check-label > .modal__check-icon {
     background-color: getColor('accent');
     border: none;
 }
+
+// .modal__checkbox:checked+.modal__check-label span {
+//     background-color: getColor('accent');
+//     border: none;
+// }
