@@ -15,7 +15,7 @@
 </head>
 <body>
 
-    <!-- <header class="header">
+    <header class="header">
         <div class="container header__container">
             <nav class="navigation">
                 <a href="" class="logo animate__animated animate__heartBeat">
@@ -43,12 +43,58 @@
                 <a class="header__phone" href="tel:+380441111111">+38 044 111 11 11</a>
                 <button class="btn btn--light" type="button" data-modal-open>онлайн-запись</button>
             </div>
+
+            <button class="menu-btn">
+                <svg class="menu-btn__open">
+                    <use href="./images/sprite.svg#icon-menu-open"></use>
+                </svg>
+            </button>
+
         </div>
-    </header> -->
+        <div class="backdrop">
+            <div class="mob-menu">
+                <div class="mob-menu__content">
+                    <ul class="mob-menu-list">
+                        <li class="mob-menu-item">
+                            <a href="" class="mob-menu-link">О нас</a>
+                        </li>
+                        <li class="mob-menu-item">
+                            <a href="" class="mob-menu-link">Услуги и цены</a>
+                        </li>
+                        <li class="mob-menu-item">
+                            <a href="" class="mob-menu-link">Мастера</a>
+                        </li>
+                        <li class="mob-menu-item">
+                            <a href="" class="mob-menu-link">Контакты</a>
+                        </li>
+                    </ul>
+                    <a href="" class="mob-menu-tel">+38 044 111 11 11</a>
+                    <button type="button" class="btn mob-menu-btn">онлайн-запись</button>
+                    <div class="mob-menu-wrap">
+                        <ul class="mob-menu__socials">
+                            <li class="mob-menu-social__item">
+                                <a class="mob-menu-social__link" href="">Instagram</a>
+                            </li>
+                            <li class="mob-menu-social__item">
+                                <a class="mob-menu-social__link" href="">Youtube</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="menu-btn">
+                    <svg class="menu-btn__close">
+                        <use href="./images/sprite.svg#icon-menu-close"></use>
+                    </svg>
+                </button>
+                
+
+            </div>
+        </div>
+    </header>
     
     <main>
         
-        <!-- <section class="hero">
+        <section class="hero">
             <div class="container hero__container">  
 
                 <div class="hero__left">
@@ -69,16 +115,50 @@
                     We work quickly, carefully, and tastefully.</p>
                 </div>
             </div>
-        </section> -->
+        </section>
 
         <!-- <section class="about">
             <div class="container about__container">
                 <ul class="about__list">
                     <li class="about__item">
-                        <img src="./images/about_img-1.jpg" alt="Барбер бреет шею" width="270" height="445">
+
+                        <picture>
+                            <source srcset="
+                                ./images/about_img-1-desk.jpg 1x, 
+                                ./images/about_img-1-desk-2x.jpg 2x" 
+                                media="(min-width: 1200px)">
+                            <source srcset="
+                                ./images/about_img-1-tab.jpg 1x, 
+                                ./images/about_img-1-tab-2x.jpg 2x" 
+                                media="(min-width: 768px)">
+                            <img 
+                                src="./images/about_img-1-desk.jpg" 
+                                alt="Барбер бреет шею" 
+                                
+                            >
+                        </picture>
+                        
                     </li>
                     <li class="about__item">
-                        <img src="./images/about_img-2.jpg" alt="Барбер делает кантик" width="270" height="445">
+
+                        <picture>
+                            <source srcset="
+                                ./images/about_img-2-desk.jpg 1x, 
+                                ./images/about_img-2-desk-2x.jpg 2x" 
+                                media="(min-width: 1200px)">
+                            <source srcset="
+                                ./images/about_img-2-tab.jpg 1x, 
+                                ./images/about_img-2-tab-2x.jpg 2x" 
+                                media="(min-width: 768px)">
+                            <img 
+                                src="./images/about_img-2-desk.jpg" 
+                                alt="Барбер делает кантик" 
+                                
+                                >
+                        </picture>
+
+
+                        
                     </li>
                 </ul>
 
@@ -87,7 +167,7 @@
                     <p class="pre-title about__pre-title pre-title--dark ">О нас</p>
                     <h2 class="section-title about__section-title section-title--dark">Лучший Барбершоп
                         твоего города</h2>
-                    <p class="after-title about__section-title after-title--dark">Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.
+                    <p class="after-title after-title--dark about__after-title">Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.
                     </p>
                     <p class="about__text">Мы команда, которая никогда не останавливается на достигнутом
                         и жаждет перемен. И когда ты попадешь в руки нашего мастера,
@@ -100,7 +180,7 @@
 
         </section> -->
 
-        <section class="prices">
+        <!-- <section class="prices">
         <div class="container prices__container">
                 <p class="pre-title prices__pre-title pre-title--light">Проведи время в компании лучших мастеров</p>
                 <h2 class="section-title prices__section-title section-title--light">Услуги и цены</h2>
@@ -144,9 +224,9 @@
                 </div>
                 <button class="btn btn--light prices__btn" type="button">онлайн-запись</button>
         </div>
-        </section>
+        </section> -->
 
-        <section class="reasons">
+        <!-- <section class="reasons">
             <div class="container reasons__container">
 
                 <div class="reasons__left">
@@ -178,9 +258,9 @@
                 </div>
             </div>
 
-        </section>
+        </section> -->
 
-        <section class="masters">
+        <!-- <section class="masters">
             <div class="container masters__container">
 
                 <p class="pre-title masters__pre-title pre-title--dark">для настоящих ценителей атмосферы</p>
@@ -189,7 +269,13 @@
                 <ul class="masters__list">
                     <li class="masters__item">
                         <div class="masters__wrapper">
-                            <img src="./images/master_img-1.jpg" alt="Барбер стрижет клиента" width="370" height="346">
+                            <img 
+                                srcset="./images/master_img-1.jpg 1x, 
+                                ./images/master_img-1-2x.jpg 2x"
+                                src="./images/master_img-1.jpg" 
+                                alt="Барбер стрижет клиента" 
+                                width="370" 
+                                height="346">
                             <p class="masters__top-text">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis cumque esse dolore, fugit eaque dicta nam
                                 sed. Atque, repellendus.
@@ -332,9 +418,9 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
 
-        <section class="gallery">
+        <!-- <section class="gallery">
             <div class="container gallery__container">
                 <p class="pre-title gallery__pre-title pre-title--dark">На латинском языке “барба” означает “борода”</p>
                 <h2 class="visually-hidden">Галерея</h2>
@@ -353,7 +439,7 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
         
         <!-- <section class="contact-wrap">
             <div class="container contact-wrap__container">
