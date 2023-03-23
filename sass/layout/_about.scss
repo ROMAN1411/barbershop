@@ -64,6 +64,8 @@
 
     &__after-title {
         margin-bottom: 20px;
+
+        @include font(400, 16px, 26px, 0.02em);
     }
 
     &__text {
