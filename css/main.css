@@ -554,6 +554,7 @@ ul {
     background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../images/main-bg-tab.jpg");
     background-position: 160px 0;
     max-width: 768px;
+    background-size: contain;
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
@@ -642,6 +643,12 @@ ul {
   font-size: 16px;
   line-height: 1.625;
   letter-spacing: 0.02em;
+  width: 270px;
+}
+@media screen and (min-width: 768px) {
+  .hero__after-title {
+    width: 340px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero__after-title {
@@ -649,6 +656,7 @@ ul {
     font-size: 18px;
     line-height: 1.6666666667;
     letter-spacing: 0.02em;
+    width: 370px;
   }
 }
 
