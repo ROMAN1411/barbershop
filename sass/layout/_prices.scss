@@ -81,11 +81,11 @@
 
         @media screen and (min-width: 1200px) {
             flex-basis: calc(100% / 2);
+            margin-bottom: 0;
         }
 
         &--left {
             padding-bottom: 0;
-
             @media screen and (min-width: 1200px) {
                 background-image: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
                 padding-bottom: 30px;
