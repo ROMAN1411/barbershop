@@ -1,7 +1,7 @@
 .header {
     position: absolute;
     width: 100%;
-    background-color: gray;
+    // background-color: gray;
     
     &__container {
         display: flex;
@@ -25,7 +25,7 @@
 
     @media screen and (min-width: 768px) {
         fill: getColor('secondary-title');
-        margin-right: 64px;
+        margin-right: 65px;
     }
 
     @media screen and (min-width: 1200px) {
@@ -73,18 +73,18 @@
         @media screen and (min-width: 1200px) {
         }
 
-        &--current::after {
-            @media screen and (min-width: 1200px) {
-                content: '';
-                position: absolute;
-                display: block;
-                background-color: getColor('accent');
-                width: 100%;
-                height: 4px;
-                border-radius: 2px;
-                bottom: -52px;
-            }
-        }
+        // &--current::after {
+        //     @media screen and (min-width: 1200px) {
+        //         content: '';
+        //         position: absolute;
+        //         display: block;
+        //         background-color: getColor('accent');
+        //         width: 100%;
+        //         height: 4px;
+        //         border-radius: 2px;
+        //         bottom: -52px;
+        //     }
+        // }
     }
 }
 
