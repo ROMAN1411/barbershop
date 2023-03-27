@@ -15,8 +15,11 @@
     }
 
     &__pre-title {
-        color: getColor('secondary-text');
         margin-bottom: 44px;
+
+        @media screen and (max-width: 767px) {
+            @include font (600, 11px, 21px, 0.01em);            
+        }
     }
     
     &__list {
@@ -31,6 +34,9 @@
     
     &__item {
         width: 100%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
         margin-bottom: 30px;
     
         @media screen and (min-width: 768px) {

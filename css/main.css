@@ -1139,8 +1139,15 @@ ul {
   }
 }
 .gallery__pre-title {
-  color: #303030;
   margin-bottom: 44px;
+}
+@media screen and (max-width: 767px) {
+  .gallery__pre-title {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.9090909091;
+    letter-spacing: 0.01em;
+  }
 }
 .gallery__list {
   margin-bottom: -30px;
@@ -1154,6 +1161,9 @@ ul {
 }
 .gallery__item {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
   margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
