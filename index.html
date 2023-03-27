@@ -85,15 +85,12 @@
                         </div>
                     </div>
 
-
                 </div>
                 <button class="menu-btn">
                     <svg class="menu-btn__close" data-menu-close>
                         <use href="./images/sprite.svg#icon-menu-close"></use>
                     </svg>
-                </button>
-                
-
+                </button>            
             </div>
         </div>
     </header>
@@ -225,7 +222,7 @@
         </div>
         </section>
 
-        <!-- <section class="reasons">
+        <section class="reasons">
             <div class="container reasons__container">
 
                 <div class="reasons__left">
@@ -234,11 +231,11 @@
                             <span class="reasons__count">600</span>
                             <p class="reasons__text">Довольных клиентов в день</p>
                         </li>
-                        <li class="reasons__item reasons__item--top-offset">
+                        <li class="reasons__item">
                             <span class="reasons__count">50</span>
                             <p class="reasons__text">Наград за отличный сервис</p>
                         </li>
-                        <li class="reasons__item reasons__item--bottom-offset">
+                        <li class="reasons__item">
                             <span class="reasons__count">20</span>
                             <p class="reasons__text">Лучших мастеров Киева</p>
                         </li>
@@ -257,33 +254,42 @@
                 </div>
             </div>
 
-        </section> -->
+        </section>
 
-        <!-- <section class="masters">
+        <section class="masters">
             <div class="container masters__container">
+                <div class="masters__card-wrap"> 
+                    <p class="pre-title masters__pre-title pre-title--dark">для настоящих ценителей атмосферы</p>
+                    <h2 class="section-title masters__section-title section-title--dark">Наши мастера</h2>
 
-                <p class="pre-title masters__pre-title pre-title--dark">для настоящих ценителей атмосферы</p>
-                <h2 class="section-title masters__section-title section-title--dark">Наши мастера</h2>
+                    <ul class="masters__list">
+                        <li class="masters__item">
+                            <div class="masters__wrapper">
 
-                <ul class="masters__list">
-                    <li class="masters__item">
-                        <div class="masters__wrapper">
-                            <img 
-                                srcset="./images/master_img-1.jpg 1x, 
-                                ./images/master_img-1-2x.jpg 2x"
-                                src="./images/master_img-1.jpg" 
-                                alt="Барбер стрижет клиента" 
-                                width="370" 
-                                height="346">
-                            <p class="masters__top-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis cumque esse dolore, fugit eaque dicta nam
-                                sed. Atque, repellendus.
-                            </p>
-                        </div>
-                        <div class="masters__bottom">
+                                <picture>
+                                    <source srcset="
+                                        ./images/master_img-1-desk.jpg 1x, 
+                                        ./images/master_img-1-desk-2x.jpg 2x" media="(min-width: 1200px)">
+                                    <source srcset="
+                                        ./images/master_img-1-tab.jpg 1x, 
+                                        ./images/master_img-1-tab-2x.jpg 2x" media="(min-width: 768px)">
+                                    <source srcset="
+                                        ./images/master_img-1-mob.jpg 1x, 
+                                        ./images/master_img-1-mob-2x.jpg 2x">
+
+                                    <img src="./images/master_img-1-desk.jpg" alt="Барбер стрижет клиента">
+                                </picture>
+
+                                <p class="masters__top-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis cumque esse dolore, fugit eaque
+                                    dicta nam
+                                    sed. Atque, repellendus.
+                                </p>
+                            </div>
+                            <div class="masters__bottom">
                                 <h3 lang="en" class="masters__name">John Smith</h3>
                                 <p lang="en" class="masters__position">Extreme Barber</p>
-                                
+
                                 <ul class="socials">
 
                                     <li class="socials__item">
@@ -320,20 +326,35 @@
                                 </ul>
 
                             </div>
-                    </li>
-                    <li class="masters__item">
-                        <div class="masters__wrapper">
-                            <img src="./images/master_img-2.jpg" alt="Барбер стрижет клиента" width="370" height="346">
-                            <p class="masters__top-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis cumque esse dolore, fugit eaque dicta nam
-                                sed. Atque, repellendus.
-                            </p>
-                        </div>
+                        </li>
+                        <li class="masters__item">
+                            <div class="masters__wrapper">
+
+                                <picture>
+                                    <source srcset="
+                                        ./images/master_img-2-desk.jpg 1x, 
+                                        ./images/master_img-2-desk-2x.jpg 2x" media="(min-width: 1200px)">
+                                    <source srcset="
+                                        ./images/master_img-2-tab.jpg 1x, 
+                                        ./images/master_img-2-tab-2x.jpg 2x" media="(min-width: 768px)">
+                                    <source srcset="
+                                        ./images/master_img-2-mob.jpg 1x, 
+                                        ./images/master_img-2-mob-2x.jpg 2x">
+
+                                    <img src="./images/master_img-2-desk.jpg" alt="Барбер стрижет клиента">
+                                </picture>
+
+                                <p class="masters__top-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis cumque esse dolore, fugit eaque
+                                    dicta nam
+                                    sed. Atque, repellendus.
+                                </p>
+                            </div>
                             <div class="masters__bottom">
                                 <h3 lang="en" class="masters__name">Michele Doe</h3>
                                 <p lang="en" class="masters__position">Extreme Barber</p>
                                 <ul class="socials">
-                                
+
                                     <li class="socials__item">
                                         <a href="" class="socials__link">
                                             <svg class="socials__icon">
@@ -341,7 +362,7 @@
                                             </svg>
                                         </a>
                                     </li>
-                                
+
                                     <li class="socials__item">
                                         <a href="" class="socials__link">
                                             <svg class="socials__icon">
@@ -349,7 +370,7 @@
                                             </svg>
                                         </a>
                                     </li>
-                                
+
                                     <li class="socials__item">
                                         <a href="" class="socials__link">
                                             <svg class="socials__icon">
@@ -357,7 +378,7 @@
                                             </svg>
                                         </a>
                                     </li>
-                                
+
                                     <li class="socials__item">
                                         <a href="" class="socials__link">
                                             <svg class="socials__icon">
@@ -367,20 +388,35 @@
                                     </li>
                                 </ul>
                             </div>
-                    </li>
-                    <li class="masters__item">
-                        <div class="masters__wrapper">
-                            <img src="./images/master_img-3.jpg" alt="Барбер стрижет клиента" width="370" height="346">
-                            <p class="masters__top-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis cumque esse dolore, fugit eaque dicta nam
-                                sed. Atque, repellendus.
-                            </p>
-                        </div>
+                        </li>
+                        <li class="masters__item">
+                            <div class="masters__wrapper">
+
+                                <picture>
+                                    <source srcset="
+                                        ./images/master_img-3-desk.jpg 1x, 
+                                        ./images/master_img-3-desk-2x.jpg 2x" media="(min-width: 1200px)">
+                                    <source srcset="
+                                        ./images/master_img-3-tab.jpg 1x, 
+                                        ./images/master_img-3-tab-2x.jpg 2x" media="(min-width: 768px)">
+                                    <source srcset="
+                                        ./images/master_img-3-mob.jpg 1x, 
+                                        ./images/master_img-3-mob-2x.jpg 2x">
+
+                                    <img src="./images/master_img-3-desk.jpg" alt="Барбер стрижет клиента">
+                                </picture>
+
+                                <p class="masters__top-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis cumque esse dolore, fugit eaque
+                                    dicta nam
+                                    sed. Atque, repellendus.
+                                </p>
+                            </div>
                             <div class="masters__bottom">
                                 <h3 lang="en" class="masters__name">Alan Black</h3>
                                 <p lang="en" class="masters__position">Extreme Barber</p>
                                 <ul class="socials">
-                                
+
                                     <li class="socials__item">
                                         <a href="" class="socials__link">
                                             <svg class="socials__icon">
@@ -388,7 +424,7 @@
                                             </svg>
                                         </a>
                                     </li>
-                                
+
                                     <li class="socials__item">
                                         <a href="" class="socials__link">
                                             <svg class="socials__icon">
@@ -396,7 +432,7 @@
                                             </svg>
                                         </a>
                                     </li>
-                                
+
                                     <li class="socials__item">
                                         <a href="" class="socials__link">
                                             <svg class="socials__icon">
@@ -404,7 +440,7 @@
                                             </svg>
                                         </a>
                                     </li>
-                                
+
                                     <li class="socials__item">
                                         <a href="" class="socials__link">
                                             <svg class="socials__icon">
@@ -414,10 +450,11 @@
                                     </li>
                                 </ul>
                             </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </section> -->
+        </section>
 
         <!-- <section class="gallery">
             <div class="container gallery__container">
