@@ -1,19 +1,49 @@
 .online {
-    width: 50%;
-    padding-right: 40px;
+    padding-top: 84px;
+    padding-bottom: 84px;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        padding-top: 130px;
+        padding-bottom: 130px;
+        margin-right: 40px;
+    }
 
     &__section-title {
+        text-align: center;
         margin-bottom: 44px;
+
+        @media screen and (min-width: 768px) {
+            text-align: left;
+        }
     }
     
     &__inputs {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         margin-bottom: 44px;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+        }
+    }
+
+    &__input + &__input {
+        margin-top: 44px;
+
+        @media screen and (min-width: 768px) {
+        margin-top: 0;
+        margin-left: 30px;
+        }
     }
     
     &__input {
-        width: 270px;
+        padding: 0 0 8px 0;
+        width: 100%;
         height: 24px;
         background-color: transparent;
         border: none;
@@ -21,21 +51,37 @@
         color: getColor('primary-title');
         outline: none;
 
+        @media screen and (min-width: 1200px) {
+            width: 270px;
+        }
+
         &--short {
-            width: 260px;
+            @media screen and (min-width: 1200px) {
+                width: 260px;
+            }
         }
     }
 
     &__text {
+        display: block;
+        padding: 0;
         width: 100%;
         height: 76px;
         background-color: transparent;
         border: none;
         border-bottom: 1px solid rgba(157, 164, 189, 0.4);
         resize: none;
-        margin-bottom: 44px;
         color: getColor('primary-title');
         outline: none;
+        margin-bottom: 44px;
+    }
+
+    &__btn {
+        margin: 0 auto;
+
+        @media screen and (min-width: 768px) {
+            margin: 0;
+        }
     }
 }
 

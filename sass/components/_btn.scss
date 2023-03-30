@@ -1,5 +1,7 @@
 .btn {
     display: block;
+    min-width: 160px;
+    min-height: 40px;
     @include font (600, 12px, 16px, 0.09em);
     padding: 12px 20px;
     font-family: inherit;
