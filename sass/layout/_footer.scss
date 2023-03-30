@@ -1,10 +1,25 @@
 .footer__container {
-    padding-top: 56px;
-    padding-bottom: 56px;
+    padding-top: 44px;
+    padding-bottom: 44px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @media screen and (min-width: 768px) {
+        padding-top: 56px;
+        padding-bottom: 56px;
+
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+}
+
+.social__links {
+    justify-content: end;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+    }
 }
 
 .footer__copy {

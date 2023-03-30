@@ -15,6 +15,7 @@ h6 {
 ul {
   margin: 0;
   padding-left: 0;
+  line-height: 0;
 }
 
 img {
@@ -1424,11 +1425,27 @@ ul {
 }
 
 .footer__container {
-  padding-top: 56px;
-  padding-bottom: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+@media screen and (min-width: 768px) {
+  .footer__container {
+    padding-top: 56px;
+    padding-bottom: 56px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+.social__links {
+  justify-content: end;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .social__links {
+    margin-bottom: 0;
+  }
 }
 
 .footer__copy {
