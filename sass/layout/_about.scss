@@ -1,75 +1,75 @@
 .about {
-    &__container {
-            padding-top: 84px;
-            padding-bottom: 84px;
-    
-            @media screen and (min-width: 768px) {
-                padding-top: 100px;
-                padding-bottom: 100px;
-                display: flex;
-            }
-    
-            @media screen and (min-width: 1200px) {
-                padding-top: 130px;
-                padding-bottom: 130px;
-            }
-        }
+  &__container {
+    padding-top: 84px;
+    padding-bottom: 84px;
 
-    &__list {
-        @media screen and (max-width: 767px) {
-        display: none;
-        flex-shrink: 0;
-        }
-
-        display: flex;
-        flex-direction: column;
-        margin-right: 30px;
-
-        @media screen and (min-width: 1200px) {
-            flex-direction: row;
-            margin-right: 64px;
-        }
+    @media screen and (min-width: 768px) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+      display: flex;
     }
 
-    &__item {
-        & + & {
-            margin-top: 30px;
-            @media screen and (min-width: 1200px) {
-                margin-top: 0;
-                margin-left: 30px;
-            }
-        }
+    @media screen and (min-width: 1200px) {
+      padding-top: 130px;
+      padding-bottom: 130px;
+    }
+  }
+
+  &__list {
+    @media screen and (max-width: 767px) {
+      display: none;
+      flex-shrink: 0;
     }
 
-    &__right {
-        width: 100%;
-    }
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
 
-    &__pre-title {
-        margin-bottom: 20px;
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+      margin-right: 64px;
     }
+  }
 
-    &__section-title {
-        @media screen and (max-width: 1199px) {
-            @include font (700, 28px, 33px, 0.05em);
-            max-width: 330px;
-        }
-        margin-bottom: 20px;
+  &__item {
+    & + & {
+      margin-top: 30px;
+      @media screen and (min-width: 1200px) {
+        margin-top: 0;
+        margin-left: 30px;
+      }
     }
+  }
 
-    &__after-title {
-        @include font(400, 16px, 24px, 0.02em);
-        margin-bottom: 20px;
+  &__right {
+    width: 100%;
+  }
 
-        @media screen and (min-width: 1200px) {
-            @include font(400, 18px, 30px, 0.02em);
-        }
+  &__pre-title {
+    margin-bottom: 20px;
+  }
+
+  &__section-title {
+    @media screen and (max-width: 1199px) {
+      @include font(700, 28px, 33px, 0.05em);
+      max-width: 330px;
     }
+    margin-bottom: 20px;
+  }
 
-    &__text {
-        @include font(400, 14px, 26px, 0.02em);
-        color: getColor('primary-text');
-        margin-bottom: 40px;
-        width: 100%;
+  &__after-title {
+    @include font(400, 16px, 24px, 0.02em);
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 1200px) {
+      @include font(400, 18px, 30px, 0.02em);
     }
+  }
+
+  &__text {
+    @include font(400, 14px, 26px, 0.02em);
+    color: getColor("primary-text");
+    margin-bottom: 40px;
+    width: 100%;
+  }
 }

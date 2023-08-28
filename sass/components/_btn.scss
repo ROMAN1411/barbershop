@@ -1,32 +1,31 @@
 .btn {
-    display: block;
-    min-width: 160px;
-    min-height: 40px;
-    @include font (600, 12px, 16px, 0.09em);
-    padding: 12px 20px;
-    font-family: inherit;
-    text-transform: uppercase;
+  display: block;
+  min-width: 160px;
+  min-height: 40px;
+  @include font(600, 12px, 0px, 0.09em);
+  padding: 12px 20px;
+  font-family: inherit;
+  text-transform: uppercase;
 
-    border: 1px solid getColor('accent');
-    border-radius: 25px;
-    background-color: transparent;
-    cursor: pointer;
+  border: 1px solid getColor("accent");
+  border-radius: 25px;
+  background-color: transparent;
+  cursor: pointer;
 
-    transition: 
-        color $transition-duration $transition-timing-function, 
-        background-color $transition-duration $transition-timing-function;
+  transition: color $transition-duration $transition-timing-function,
+    background-color $transition-duration $transition-timing-function;
 
-    &:hover,
-    &:focus {
-        color: getColor('primary-title');
-        background-color: getColor('accent');
-    }
+  &:hover,
+  &:focus {
+    color: getColor("primary-title");
+    background-color: getColor("accent");
+  }
 
-    &--light {
-        color: getColor('primary-title');
-    }
+  &--light {
+    color: getColor("primary-title");
+  }
 
-    &--dark {
-        color: getColor('secondary-title');
-    }
+  &--dark {
+    color: getColor("secondary-title");
+  }
 }

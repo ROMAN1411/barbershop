@@ -1,52 +1,51 @@
 .pre-title {
-    @include font (600, 11px, 15px, 0.1em);
-    text-transform: uppercase;
-    @extend %align-items;
+  @include font(600, 11px, 15px, 0.1em);
+  text-transform: uppercase;
+  @extend %align-items;
 
+  &::before {
+    content: "";
+    width: 60px;
+    height: 1px;
+    margin-right: 20px;
+    display: block;
+  }
+
+  &--light {
+    color: rgba(157, 164, 189, 0.6);
     &::before {
-        content: "";
-        width: 60px;
-        height: 1px;
-        margin-right: 20px;
-        display: block;
+      background-color: currentColor;
     }
+  }
 
-    &--light {
-        color: rgba(157, 164, 189, 0.6);
-        &::before {
-            background-color: currentColor;
-        }
+  &--dark {
+    color: getColor("secondary-text");
+    &::before {
+      background-color: currentColor;
     }
-
-    &--dark {
-        color: getColor('secondary-text');
-        &::before {
-            background-color: currentColor;
-        }
-    }
-    
+  }
 }
 
 .section-title {
-    font-family: 'Raleway', sans-serif;
-    @include font(700, 42px, 49px, 0.05em);
+  font-family: "Raleway", sans-serif;
+  @include font(700, 42px, 49px, 0.05em);
 
-    &--light {
-        color: getColor('primary-title');
-    }
+  &--light {
+    color: getColor("primary-title");
+  }
 
-    &--dark {
-        color: getColor('secondary-title');
-    }
+  &--dark {
+    color: getColor("secondary-title");
+  }
 }
 
 .after-title {
-    @include font(400, 18px, 30px, 0.02em);
+  @include font(400, 18px, 30px, 0.02em);
 
-    &--light {
-        color: getColor('third-text');
-    }
-    &--dark {
-        color: getColor('primary-text');
-    }
+  &--light {
+    color: getColor("third-text");
+  }
+  &--dark {
+    color: getColor("primary-text");
+  }
 }

@@ -1,106 +1,105 @@
 .masters {
-    background-color: #F7F7F7;
+  background-color: #f7f7f7;
 
-    &__container {
-        padding-top: 84px;
-        padding-bottom: 84px;
+  &__container {
+    padding-top: 84px;
+    padding-bottom: 84px;
 
-        @media screen and (min-width: 768px) {
-            padding-top: 100px;
-            padding-bottom: 100px;
-        }
-
-        @media screen and (min-width: 1200px) {
-            padding-top: 130px;
-            padding-bottom: 130px;
-        }
+    @media screen and (min-width: 768px) {
+      padding-top: 100px;
+      padding-bottom: 100px;
     }
 
-    &__card-wrap {
-        @media screen and (min-width: 768px) {
-                width: 450px;
-                margin: 0 auto;
-            }
+    @media screen and (min-width: 1200px) {
+      padding-top: 130px;
+      padding-bottom: 130px;
+    }
+  }
 
-        @media screen and (min-width: 1200px) {
-            width: 100%;
-        }
+  &__card-wrap {
+    @media screen and (min-width: 768px) {
+      width: 450px;
+      margin: 0 auto;
     }
 
-    &__pre-title {
-        margin-bottom: 20px;
+    @media screen and (min-width: 1200px) {
+      width: 100%;
     }
+  }
 
-    &__section-title {
-        margin-bottom: 44px;
+  &__pre-title {
+    margin-bottom: 20px;
+  }
+
+  &__section-title {
+    margin-bottom: 44px;
+  }
+
+  &__list {
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -30px;
     }
+  }
 
-    &__list {
-        @media screen and (min-width: 1200px) {
-            display: flex;
-            flex-wrap: wrap;
-            margin-left: -30px;
-        }
+  &__item {
+    width: 100%;
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc(100% / 3 - 30px);
+      margin-left: 30px;
+
+      &:hover .masters__top-text {
+        transform: translateY(0);
+      }
     }
+  }
 
-    &__item {
-        width: 100%;
+  &__item + &__item {
+    margin-top: 64px;
 
-        @media screen and (min-width: 1200px) {
-            flex-basis: calc(100% / 3 - 30px);
-            margin-left: 30px;
-
-            &:hover .masters__top-text {
-                transform: translateY(0);
-            }
-        }
+    @media screen and (min-width: 1200px) {
+      margin-top: 0;
     }
+  }
 
-    &__item+&__item {
-        margin-top: 64px;
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
 
-        @media screen and (min-width: 1200px) {
-            margin-top: 0;
-        }
-    }
+  &__top-text {
+    @include font(400, 16px, 19px, 0.02em);
 
-    &__wrapper {
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-    }
+    color: getColor("primary-title");
+    background-color: getColor("accent");
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform $transition-duration $transition-timing-function;
+  }
 
-    &__top-text {
-        @include font (400, 16px, 19px, 0.02em);
+  &__bottom {
+    padding-top: 30px;
+  }
 
-        color: getColor('primary-title');
-        background-color: getColor('accent');
-        padding: 20px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        transform: translateY(100%);
-        transition: 
-            transform $transition-duration $transition-timing-function;
-    }
+  &__name {
+    @include font(400, 18px, 25px, 0.02em);
+    text-align: center;
+    color: getColor("secondary-text");
+    margin-bottom: 8px;
+  }
 
-    &__bottom {
-        padding-top: 30px;
-    }
-
-    &__name {
-        @include font (400, 18px, 25px, 0.02em);
-        text-align: center;
-        color: getColor('secondary-text');
-        margin-bottom: 8px;
-    }
-
-    &__position {
-        @include font (400, 14px, 19px, 0.02em);
-        text-align: center;
-        color: getColor('accent');
-        margin-bottom: 30px;
-    }
+  &__position {
+    @include font(400, 14px, 19px, 0.02em);
+    text-align: center;
+    color: getColor("accent");
+    margin-bottom: 30px;
+  }
 }

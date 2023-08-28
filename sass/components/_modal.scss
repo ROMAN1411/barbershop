@@ -1,149 +1,144 @@
 .backdrop {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(157, 164, 189, 0.6);
-    top: 0;
-    @extend %align-items;
-    justify-content: center;
-    transition:
-        opacity $transition-duration $transition-timing-function,
-        visibility $transition-duration $transition-timing-function;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(157, 164, 189, 0.6);
+  top: 0;
+  @extend %align-items;
+  justify-content: center;
+  transition: opacity $transition-duration $transition-timing-function,
+    visibility $transition-duration $transition-timing-function;
 
-    &.is-hidden {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-    }
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
 
 .modal {
-    width: 500px;
-    min-height: 600px;
-    background-color: #fff;
-    border-radius: 10px;
+  width: 500px;
+  min-height: 600px;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+  padding: 30px;
+
+  &__close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #999;
+    @extend %align-items;
+    justify-content: center;
+    transition: color $transition-duration $transition-timing-function;
+
+    &:hover,
+    &:focus {
+      color: getColor("accent");
+    }
+  }
+
+  &__title {
+    @include font(700, 18px, 26px, 0.02em);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__field {
+    margin-bottom: 15px;
+  }
+
+  &__label {
+    @include font(400, 18px, 22px, 0.02em);
+    color: getColor("primary-text");
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  &__wrapper {
+    display: block;
     position: relative;
-    padding: 30px;
+  }
 
-    &__close-btn {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background-color: transparent;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        border: 1px solid #999;
-        @extend %align-items;
-        justify-content: center;
-        transition: 
-            color $transition-duration $transition-timing-function;
+  &__input {
+    width: 100%;
+    height: 45px;
+    border-radius: 3px;
+    border: 1px solid #999;
+    background: transparent;
+    padding-left: 40px;
+    padding-right: 20px;
+    outline: none;
+    transition: border-color $transition-duration $transition-timing-function;
 
-        &:hover,
-        &:focus {
-            color: getColor('accent');
-        }
+    &:focus {
+      border-color: getColor("accent");
     }
-    
-    &__title {
-        @include font (700, 18px, 26px, 0.02em);
-        text-align: center;
-        margin-bottom: 20px;
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill $transition-duration $transition-timing-function;
+
+    .modal__input:focus + & {
+      fill: getColor("accent");
     }
-    
-    &__field {
-        margin-bottom: 15px;
+  }
+
+  &__text {
+    width: 100%;
+    height: 100px;
+    border-radius: 3px;
+    resize: none;
+    border: 1px solid #999;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+    transition: border-color $transition-duration $transition-timing-function;
+
+    &:focus {
+      border-color: getColor("accent");
     }
+  }
 
-    &__label {
-        @include font (400, 18px, 22px, 0.02em);
-        color: getColor('primary-text');
-        display: block;
-        margin-bottom: 5px;
-    }
+  &__check-label {
+    font-size: 14px;
+    line-height: 1.2;
+    color: getColor("primary-text");
+    display: flex;
+    margin-left: 15px;
+    margin-bottom: 15px;
+  }
 
-    &__wrapper {
-        display: block;
-        position: relative;
-    }
+  &__check-icon {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #303030;
+    border-radius: 3px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    &__input {
-        width: 100%;
-        height: 45px;
-        border-radius: 3px;
-        border: 1px solid #999;
-        background: transparent;
-        padding-left: 40px;
-        padding-right: 20px;
-        outline: none;
-        transition: 
-            border-color $transition-duration $transition-timing-function;
-
-        &:focus {
-            border-color: getColor('accent');
-        }
-    }
-
-    &__icon {
-        width: 18px;
-        height: 18px;
-        position: absolute;
-        left: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        transition: 
-            fill $transition-duration $transition-timing-function;
-
-        .modal__input:focus+& {
-            fill: getColor('accent');
-        }
-    }
-
-    &__text {
-        width: 100%;
-        height: 100px;
-        border-radius: 3px;
-        resize: none;
-        border: 1px solid #999;
-        background: transparent;
-        padding: 10px;
-        outline: none;
-        transition: 
-            border-color $transition-duration $transition-timing-function;
-
-        &:focus {
-            border-color: getColor('accent');
-        }
-    }
-
-    &__check-label {
-        font-size: 14px;
-        line-height: 1.2;
-        color: getColor('primary-text');
-        display: flex;
-        margin-left: 15px;
-        margin-bottom: 15px;
-    }
-
-    &__check-icon {
-        width: 15px;
-        height: 15px;
-        border: 2px solid #303030;
-        border-radius: 3px;
-        margin-right: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .modal__btn {
-        margin: 0 auto;
-    }
+  .modal__btn {
+    margin: 0 auto;
+  }
 }
 
 .modal__checkbox:checked + .modal__check-label > .modal__check-icon {
-    background-color: getColor('accent');
-    border: none;
+  background-color: getColor("accent");
+  border: none;
 }
 
 // .modal__checkbox:checked+.modal__check-label span {

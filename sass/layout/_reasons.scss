@@ -1,125 +1,125 @@
 .reasons {
-    &__container {
-        display: flex;
-        flex-direction: column-reverse;
+  &__container {
+    display: flex;
+    flex-direction: column-reverse;
 
-        padding-top: 84px;
-        padding-bottom: 84px;
+    padding-top: 84px;
+    padding-bottom: 84px;
 
-        @media screen and (min-width: 768px) {
-            padding-top: 100px;
-            padding-bottom: 100px;
-        }
-    
-        @media screen and (min-width: 1200px) {
-            padding-top: 130px;
-            padding-bottom: 130px;
-
-            flex-direction: row;
-        }
+    @media screen and (min-width: 768px) {
+      padding-top: 100px;
+      padding-bottom: 100px;
     }
 
-    &__left {
-        display: flex;
-        flex-shrink: 0;
+    @media screen and (min-width: 1200px) {
+      padding-top: 130px;
+      padding-bottom: 130px;
 
-        @media screen and (min-width: 768px) {
-            justify-content: flex-end;
-        }
+      flex-direction: row;
+    }
+  }
 
-        @media screen and (min-width: 1200px) {
-            justify-content: center;
-            width: 50%;
-        }
+  &__left {
+    display: flex;
+    flex-shrink: 0;
+
+    @media screen and (min-width: 768px) {
+      justify-content: flex-end;
     }
 
-    &__list {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
+    @media screen and (min-width: 1200px) {
+      justify-content: center;
+      width: 50%;
+    }
+  }
 
-        @media screen and (min-width: 480px) {
-            width: 450px;
-        }
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 
-        @media screen and (min-width: 1200px) {
-            width: 370px;
-        }
+    @media screen and (min-width: 480px) {
+      width: 450px;
     }
 
-    &__item {
-        width: 44%;
-        height: 133px;
-        padding: 20px 24px;
-        text-align: center;
-        background-color: #F7F7F7;
-
-        flex-basis: calc(100% / 2 - 15px);
-
-        &:nth-child(odd) {
-            margin-right: 30px;
-        }
-
-        &:nth-child(even) {
-            margin-top: 33px;
-        }
-
-        @media screen and (min-width: 480px) {
-            width: 193px;
-        }
-
-        @media screen and (min-width: 1200px) {
-            width: 170px;
-        }
-
-        &-dif {
-            padding: 20px;
-            letter-spacing: 0em;
-        }
+    @media screen and (min-width: 1200px) {
+      width: 370px;
     }
-    
-    &__count {
-        @include font (700, 42px, 57px, 0.05em);
-        color: getColor('secondary-title');
-        text-align: center;
-        display: flex;
-        justify-content: center;
+  }
 
-        &::after {
-            content: '+';
-            @include font (600, 16px, 22px, 0.02em);
-            color: getColor('accent');
-        }
+  &__item {
+    width: 44%;
+    height: 133px;
+    padding: 20px 24px;
+    text-align: center;
+    background-color: #f7f7f7;
+
+    flex-basis: calc(100% / 2 - 15px);
+
+    &:nth-child(odd) {
+      margin-right: 30px;
     }
 
-    &__text {
-        @include font (600, 11px, 15px, 0.02em);
-        color: getColor('secondary-text');
+    &:nth-child(even) {
+      margin-top: 33px;
     }
 
-    &__right {
-        // margin-left: 130px;
-        margin-bottom: 44px;
-        // width: 500px;
-
-        @media screen and (min-width: 480px) {
-            max-width: 500px;
-        }
-
-        @media screen and (min-width: 1200px) {
-            margin-bottom: 0;
-        }
+    @media screen and (min-width: 480px) {
+      width: 193px;
     }
 
-    &__pre-title {
-        margin-bottom: 20px;
+    @media screen and (min-width: 1200px) {
+      width: 170px;
     }
 
-    &__section-title {
-        margin-bottom: 20px;
+    &-dif {
+      padding: 20px;
+      letter-spacing: 0em;
+    }
+  }
+
+  &__count {
+    @include font(700, 42px, 57px, 0.05em);
+    color: getColor("secondary-title");
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    &::after {
+      content: "+";
+      @include font(600, 16px, 22px, 0.02em);
+      color: getColor("accent");
+    }
+  }
+
+  &__text {
+    @include font(600, 11px, 15px, 0.02em);
+    color: getColor("secondary-text");
+  }
+
+  &__right {
+    // margin-left: 130px;
+    margin-bottom: 44px;
+    // width: 500px;
+
+    @media screen and (min-width: 480px) {
+      max-width: 500px;
     }
 
-    &__after-title {
-        color: getColor('primary-text');
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 0;
     }
+  }
+
+  &__pre-title {
+    margin-bottom: 20px;
+  }
+
+  &__section-title {
+    margin-bottom: 20px;
+  }
+
+  &__after-title {
+    color: getColor("primary-text");
+  }
 }

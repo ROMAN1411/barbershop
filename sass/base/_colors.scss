@@ -1,15 +1,14 @@
 $colors: (
-    'primary-title': #ffffff,
-    'secondary-title': #303030,
+  "primary-title": #ffffff,
+  "secondary-title": #303030,
 
-    'primary-text': #555555,
-    'secondary-text': #303030,
-    'third-text': #9DA4BD,
-    
-    'accent': #FF6C00,
+  "primary-text": #555555,
+  "secondary-text": #303030,
+  "third-text": #9da4bd,
+
+  "accent": #ff6c00,
 );
 
 @function getColor($key) {
-    @return map-get($colors, $key);
-};
-
+  @return map-get($colors, $key);
+}
